@@ -54,7 +54,7 @@ Ps=Pn./abs(Pn);
 %  figure(m);imshow(angle(Ps)+2*pi,[]),title('phase');
 Jc=J2./Ps;
 
-A=[1,1;1,cos(ang);1,sin(ang)];
+A=[1,1;1,cos(ang);0,sin(ang)];
 A=((A'*A)\A');
 [m,n]=size(in);
 J=zeros(3,1,m,n);
