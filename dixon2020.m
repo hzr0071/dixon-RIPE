@@ -55,7 +55,8 @@ Ps=Pn./abs(Pn);
 Jc=J2./Ps;
 
 A=[1,1;1,cos(ang);0,sin(ang)];
-A=((A'*A)\A');
+%A=((A'*A)\A');
+A=((inv(A'*A))*A');
 [m,n]=size(in);
 J=zeros(3,1,m,n);
 Xls=zeros(2,1,m,n);
